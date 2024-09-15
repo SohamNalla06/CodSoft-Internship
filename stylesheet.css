@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+#display {
+    font-size: 2.5rem;
+    padding: 20px;
+    background-color: #222;
+    color: #ffffff;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.btn {
+    background-color: #f0f0f5;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #e0e0e5;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+#clear {
+    grid-column: span 4;
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#clear:hover {
+    background-color: #ff3333;
+}
+
+#clear:active {
+    background-color: #ff1a1a;
+}
+
+button[data-value="="] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[data-value="="]:hover {
+    background-color: #45a049;
+}
+
+button[data-value="="]:active {
+    background-color: #3e8e41;
+}
+
+button[data-value="+"] {
+    background-color: #ffa000;
+    color: white;
+}
+
+button[data-value="-"],
+button[data-value="*"],
+button[data-value="/"] {
+    background-color: #ffb300;
+    color: white;
+}
+
+button[data-value="+"]:hover,
+button[data-value="-"]:hover,
+button[data-value="*"]:hover,
+button[data-value="/"]:hover {
+    background-color: #ff9800;
+}
+
+button[data-value="+"]:active,
+button[data-value="-"]:active,
+button[data-value="*"]:active,
+button[data-value="/"]:active {
+    background-color: #e68900;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 15px;
+    }
+    
+    .btn {
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+    
+    #display {
+        font-size: 2rem;
+        height: 70px;
+    }
+}
+/* Default Light Mode Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+#display {
+    background-color: #eaeaea;
+    padding: 20px;
+    text-align: right;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #d1d1d1;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #bfbfbf;
+}
+
+#darkModeToggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#darkModeToggle:hover {
+    background-color: #555;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #181818;
+    color: #fff;
+}
+
+body.dark-mode .calculator {
+    background-color: #333;
+    box-shadow: none;
+}
+
+body.dark-mode #display {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode button {
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #bbb;
+    color: black;
+}
